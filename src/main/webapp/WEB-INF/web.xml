@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0" metadata-complete="false">
+	<!-- 在启动服务器的时候将Spring容器启动起来:在这个时候就会将容器中相关的对象给创建出来 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- 默认情况下,启动服务器的时候,是从WEBN-INF路径下去找启动Spring容器需要的applicaitonContext.xml文件
+		而实际上该文件是在classpath的根路径下,所以,我们需要告诉他文件的位置
+		通过设置监听器中的contextConfigLocation属性的值来设置加载配置文件的路径
+		要为监听器设置参数只能使用全局的初始化参数(servlet/filter可以使用init-param来设置)
+	 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+	 	<!-- 指定从classpath根路径中去找文件 -->
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	 
+  <!-- 配置前端控制器 -->
+	<filter>
+		<filter-name>Struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!--druid监控界面-->
+	<servlet>
+		<servlet-name>DruidStatView</servlet-name>
+		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DruidStatView</servlet-name>
+		<url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+</web-app>

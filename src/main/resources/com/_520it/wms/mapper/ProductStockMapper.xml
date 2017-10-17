@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.wms.mapper.ProductStockMapper" >
+  <resultMap id="BaseResultMap" type="com._520it.wms.domain.ProductStock" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="storeNumber" property="storeNumber" jdbcType="DECIMAL" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <association property="product" javaType="Product" >
+      <id column="product_id" property="id" />
+      <result column="product_name" property="name" />
+      <result column="product_sn" property="sn" />
+      <association property="brand" javaType="Brand">
+        <id column="brand_id" property="id" />
+        <result column="brand_name" property="name" />
+      </association>
+    </association>
+    <association property="depot" javaType="Depot" columnPrefix="depot_">
+      <id column="id" property="id" />
+      <result column="name" property="name" />
+    </association>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from productstock
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com._520it.wms.domain.ProductStock" useGeneratedKeys="true" keyProperty="id" >
+    insert into productstock (price, storeNumber, amount, 
+      product_id, depot_id)
+    values (#{price,jdbcType=DECIMAL}, #{storeNumber,jdbcType=DECIMAL}, #{amount,jdbcType=DECIMAL}, 
+      #{product.id,jdbcType=BIGINT}, #{depot.id,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com._520it.wms.domain.ProductStock" >
+    update productstock
+    set price = #{price,jdbcType=DECIMAL},
+      storeNumber = #{storeNumber,jdbcType=DECIMAL},
+      amount = #{amount,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, price, storeNumber, amount, product_id, depot_id
+    from productstock
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, price, storeNumber, amount, product_id, depot_id
+    from productstock
+  </select>
+  <select id="selectByProductIdAndDepotId" resultType="com._520it.wms.domain.ProductStock">
+    SELECT * FROM productstock WHERE product_id=#{productId} and depot_id=#{depotId}
+  </select>
+
+  <sql id="base_select">
+        ps.*,
+    product.id   product_id,
+    product.name product_name,
+    product.sn product_sn,
+    depot.id     depot_id,
+    depot.name   depot_name,
+    brand.id   brand_id,
+    brand.name   brand_name
+  </sql>
+  <sql id="base_from">
+      productstock ps LEFT JOIN product ON ps.product_id = product.id
+    LEFT JOIN depot ON ps.depot_id = depot.id
+    LEFT JOIN brand ON product.brand_id = brand.id
+  </sql>
+  <sql id="base_where">
+    <where>
+      <if test="keyword!=null and keyword != ''">
+        and (product.name LIKE concat("%",#{keyword},"%") or product.sn LIKE concat("%",#{keyword},"%"))
+      </if>
+      <if test="brandId>0">
+        and brand.id=#{brandId}
+      </if>
+      <if test="depotId>0">
+        and depot.id=#{depotId}
+      </if>
+      <if test="limitNum!=null">
+        and ps.storeNumber &lt;= #{limitNum}
+      </if>
+    </where>
+  </sql>
+
+  <select id="queryForCount" resultType="java.lang.Integer">
+    SELECT count(*) FROM <include refid="base_from"/>
+    <include refid="base_where"/>
+  </select>
+  <select id="queryForList" resultMap="BaseResultMap">
+    SELECT <include refid="base_select"/>
+    FROM <include refid="base_from"/>
+    <include refid="base_where"/>
+    limit #{beginIndex},#{pageSize}
+  </select>
+</mapper>

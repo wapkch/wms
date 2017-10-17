@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<!-- 开启延迟加载:在需要的时候再去查询相关的数据 -->
+		<setting name="lazyLoadingEnabled" value="true" />
+		<!-- 默认情况下,访问many任何属性都会触发延迟加载操作
+			设置为false表示按需加载
+		 -->
+		<setting name="aggressiveLazyLoading" value="false"/>
+		<!-- 默认情况下,访问到Object对象中的equals,clone,hashCode,toString会触发延迟加载
+			一般情况下,我们将该属性设置为clone即可,其他情况下就不要触发延迟加载
+		 -->
+		<setting name="lazyLoadTriggerMethods" value="clone"/>
+	</settings>
+</configuration>

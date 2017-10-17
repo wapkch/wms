@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com._520it.wms.service.impl,com._520it.wms.web.action"></context:component-scan>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com._520it.wms.mapper" />
+	</bean>
+
+	<context:property-placeholder location="classpath:db.properties" 
+		system-properties-mode="NEVER" />
+		<!-- 配置事务管理 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- 配置事务的环绕增强 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager" >
+		<tx:attributes>
+		<!-- 将查询相关的方法设置在只读事务中:get/list/query开头的作为查询操作 -->
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="list*" read-only="true" />
+			<tx:method name="query*" read-only="true" />
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 将事务管理的业务织入到指定的位置 -->
+	<aop:config>
+		<aop:pointcut expression="execution(* com._520it.wms.service.*.*(..))"
+			id="pc" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="pc" />
+	</aop:config>
+	
+	<!-- 配置连接池对象 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="driverClassName" value="${driverClassName}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${username}"></property>
+		<property name="password" value="${password}"></property>
+		<property name="filters" value="stat"/>
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 配置MyBatis的主配置文件的位置 -->
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+		<!-- 配置映射文件的位置
+			可以使用*来配置, *Mapper 表示所有的以Mapper.xml结尾的文件
+		 -->
+		<property name="mapperLocations" value="classpath:com/_520it/wms/mapper/*Mapper.xml"></property>
+		<!-- 配置连接池 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 指定需要生成别名的类所在的包 -->
+		<property name="typeAliasesPackage" value="com._520it.wms.domain"></property>
+	</bean>
+	<!-- 引入mapper -->
+	<!-- 引入service -->
+	<!-- 引入action -->
+</beans>

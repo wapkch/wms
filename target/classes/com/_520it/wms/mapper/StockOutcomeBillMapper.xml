@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.wms.mapper.StockOutcomeBillMapper" >
+  <resultMap id="BaseResultMap" type="com._520it.wms.domain.StockOutcomeBill" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="sn" property="sn" jdbcType="VARCHAR" />
+    <result column="vdate" property="vdate" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="totalAmount" property="totalAmount" jdbcType="DECIMAL" />
+    <result column="totalNumber" property="totalNumber" jdbcType="DECIMAL" />
+    <result column="auditTime" property="auditTime" jdbcType="TIMESTAMP" />
+    <result column="inputTime" property="inputTime" jdbcType="TIMESTAMP" />
+    <association property="inputUser" javaType="Employee" columnPrefix="inputUser_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+    <association property="auditor" javaType="Employee" columnPrefix="auditor_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+    <association property="depot" javaType="Depot" columnPrefix="depot_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+    <association property="client" javaType="Client" columnPrefix="client_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+    <collection property="items" ofType="StockOutcomeBillItem" select="selectItemsByBillId" column="id"/>
+  </resultMap>
+
+  <resultMap id="BaseItemResultMap" type="StockOutcomeBillItem">
+    <id column="id" property="id"/>
+    <result column="salePrice" property="salePrice"/>
+    <result column="number" property="number"/>
+    <result column="amount" property="amount"/>
+    <result column="remark" property="remark"/>
+    <association property="product" javaType="Product">
+      <id column="product_id" property="id"/>
+      <result column="product_name" property="name"/>
+      <association property="brand" javaType="Brand">
+        <id column="brand_id" property="id"/>
+        <result column="brand_name" property="name"/>
+      </association>
+    </association>
+  </resultMap>
+
+  <insert id="insertItem">
+    INSERT INTO stockOutcomebillitem(salePrice, number, amount, remark, product_id, bill_id)
+     VALUE (#{salePrice},#{number},#{amount},#{remark},#{product.id},#{bill.id})
+  </insert>
+
+  <delete id="deleteItemByBillId">
+    DELETE FROM stockOutcomebillitem WHERE bill_id=#{orderBillId}
+  </delete>
+
+  <sql id="base_item_select">
+       item.*,
+    product.id   product_id,
+    product.name product_name,
+    brand.id     brand_id,
+    brand.name   brand_name
+  </sql>
+  <sql id="base_item_from">
+      stockOutcomebillitem item LEFT JOIN product ON item.product_id = product.id
+    LEFT JOIN brand ON product.brand_id = brand.id
+  </sql>
+  <sql id="base_item_where">
+    <where></where>
+  </sql>
+
+  <select id="selectItemsByBillId" resultMap="BaseItemResultMap">
+    SELECT <include refid="base_item_select"/>
+    FROM <include refid="base_item_from"/>
+    WHERE item.bill_id=#{billId}
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from stockOutcomebill
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com._520it.wms.domain.OrderBill" useGeneratedKeys="true" keyProperty="id" >
+    insert into stockOutcomebill (sn, vdate, status, 
+      totalAmount, totalNumber, auditTime, 
+      inputTime, inputUser_id, auditor_id, 
+      depot_id,client_id)
+    values (#{sn,jdbcType=VARCHAR}, #{vdate,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, 
+      #{totalAmount,jdbcType=DECIMAL}, #{totalNumber,jdbcType=DECIMAL}, #{auditTime,jdbcType=TIMESTAMP}, 
+      #{inputTime,jdbcType=TIMESTAMP}, #{inputUser.id,jdbcType=BIGINT}, #{auditor.id,jdbcType=BIGINT},
+      #{depot.id,jdbcType=BIGINT},#{client.id,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com._520it.wms.domain.OrderBill" >
+    update stockOutcomebill
+    set sn = #{sn,jdbcType=VARCHAR},
+      vdate = #{vdate,jdbcType=TIMESTAMP},
+      totalAmount = #{totalAmount,jdbcType=DECIMAL},
+      totalNumber = #{totalNumber,jdbcType=DECIMAL},
+      depot_id = #{depot.id,jdbcType=BIGINT},
+      client_id = #{client.id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="audit">
+    UPDATE stockOutcomebill SET auditTime=#{auditTime},auditor_id=#{auditor.id},status=#{status} where id=#{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select <include refid="base_select"/>
+    FROM <include refid="base_from"/>
+    where bill.id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, sn, vdate, status, totalAmount, totalNumber, auditTime, inputTime, inputUser_id, 
+    auditor_id, depot_id
+    from stockOutcomebill
+  </select>
+
+  <sql id="base_select">
+        bill.*,
+    inputUser.id   inputUser_id,
+    inputUser.name inputUser_name,
+    auditor.id     auditor_id,
+    auditor.name   auditor_name,
+    depot.id    depot_id,
+    depot.name  depot_name,
+    client.id    client_id,
+    client.name  client_name
+  </sql>
+  <sql id="base_from">
+      stockOutcomebill bill LEFT JOIN employee inputUser ON bill.inputUser_id = inputUser.id
+    LEFT JOIN employee auditor ON bill.auditor_id = auditor.id
+    LEFT JOIN depot ON bill.depot_id = depot.id
+    LEFT JOIN client ON bill.client_id = client.id
+  </sql>
+  <sql id="base_where">
+    <where>
+      <if test="beginDate!=null">
+        and vdate &gt;= #{beginDate}
+      </if>
+      <if test="endDate!=null">
+        and vdate &lt;= #{endDate}
+      </if>
+      <if test="depotId>0">
+        and depot.id=#{depotId}
+      </if>
+      <if test="clientId>0">
+        and client.id=#{clientId}
+      </if>
+      <if test="status != -1">
+        and status=#{status}
+      </if>
+    </where>
+  </sql>
+  <select id="queryForCount" resultType="java.lang.Integer">
+    SELECT count(*) FROM <include refid="base_from"/>
+    <include refid="base_where"/>
+  </select>
+  <select id="queryForList" resultMap="BaseResultMap">
+    SELECT <include refid="base_select"/>
+    FROM <include refid="base_from"/>
+    <include refid="base_where"/>
+    limit #{beginIndex},#{pageSize}
+  </select>
+</mapper>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.wms.mapper.ChartMapper">
+
+    <sql id="base_orderChart_where">
+        <where>
+            <if test="beginDate!=null">
+                and vdate &gt;= #{beginDate}
+            </if>
+            <if test="endDate!=null">
+                and vdate &lt;= #{endDate}
+            </if>
+            <if test="keyword!=null and keyword != ''">
+                and (p.name LIKE concat("%",#{keyword},"%") or p.sn LIKE concat("%",#{keyword},"%"))
+            </if>
+            <if test="brandId>0">
+                and b.id=#{brandId}
+            </if>
+            <if test="supplierId>0">
+                and s.id=#{supplierId}
+            </if>
+            and status=1
+        </where>
+    </sql>
+    <sql id="base_saleChart_where">
+        <where>
+            <if test="beginDate!=null">
+                and vdate &gt;= #{beginDate}
+            </if>
+            <if test="endDate!=null">
+                and vdate &lt;= #{endDate}
+            </if>
+            <if test="keyword!=null and keyword != ''">
+                and (p.name LIKE concat("%",#{keyword},"%") or p.sn LIKE concat("%",#{keyword},"%"))
+            </if>
+            <if test="brandId>0">
+                and b.id=#{brandId}
+            </if>
+            <if test="clientId>0">
+                and c.id=#{clientId}
+            </if>
+        </where>
+    </sql>
+
+
+    <select id="orderChart" resultType="java.util.Map">
+        SELECT
+        ${groupType} groupType,
+        sum(item.number) totalNumber,
+        sum(item.amount) totalAmount
+        FROM orderbillitem item LEFT JOIN orderbill bill ON item.bill_id = bill.id
+        LEFT JOIN employee inputUser ON bill.inputUser_id = inputUser.id
+        LEFT JOIN product p ON item.product_id = p.id
+        LEFT JOIN supplier s ON bill.supplier_id = s.id
+        LEFT JOIN brand b ON p.brand_id = b.id
+        <include refid="base_orderChart_where"/>
+        GROUP BY groupType
+    </select>
+
+    <select id="saleChart" resultType="java.util.Map">
+        SELECT
+          ${groupType} groupType,
+          sum(sc.number)                totalNumber,
+          sum(sc.saleAmount)            totalAmount,
+          sum(sc.saleAmount - sc.costAmount) grossProfit
+        FROM saleaccount sc LEFT JOIN employee saleman ON sc.saleman_id = saleman.id
+          LEFT JOIN product p ON sc.product_id = p.id
+          LEFT JOIN client c ON sc.client_id = c.id
+          LEFT JOIN brand b ON p.brand_id = b.id
+          <include refid="base_saleChart_where"/>
+        GROUP BY groupType
+    </select>
+</mapper>

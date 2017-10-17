@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.wms.mapper.EmployeeMapper">
+    <resultMap id="BaseResultMap" type="com._520it.wms.domain.Employee">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="admin" property="admin" jdbcType="BIT"/>
+        <association property="dept" javaType="Department" columnPrefix="department_">
+            <id column="id" property="id" jdbcType="BIGINT"/>
+            <result column="name" property="name" jdbcType="VARCHAR"/>
+        </association>
+        <collection property="roles" ofType="Role" select="com._520it.wms.mapper.RoleMapper.selectRolesByEmpId"
+                    column="id"/>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from employee
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+    <delete id="deleteRelation">
+        DELETE FROM emp_role WHERE emp_id=#{employeeId}
+    </delete>
+    <delete id="batchDelete">
+        DELETE FROM employee WHERE id IN
+        <foreach collection="list" open="(" separator="," close=")" item="item">
+            #{item}
+        </foreach>
+    </delete>
+    <delete id="batchDeleteRelation">
+        DELETE FROM emp_role WHERE emp_id IN
+        <foreach collection="list" open="(" separator="," close=")" item="item">
+            #{item}
+        </foreach>
+    </delete>
+
+    <insert id="insert" parameterType="com._520it.wms.domain.Employee" useGeneratedKeys="true" keyProperty="id">
+    insert into employee (name, password, email, 
+      age, admin, dept_id)
+    values (#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{admin,jdbcType=BIT}, #{dept.id,jdbcType=BIGINT})
+  </insert>
+
+    <insert id="saveRelations">
+        INSERT INTO emp_role(emp_id,role_id) VALUES (#{employeeId},#{roleId})
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com._520it.wms.domain.Employee">
+        update employee
+        set name = #{name,jdbcType=VARCHAR},
+        <if test="password!=null">
+            password = #{password,jdbcType=VARCHAR},
+        </if>
+        email = #{email,jdbcType=VARCHAR},
+        age = #{age,jdbcType=INTEGER},
+        admin = #{admin,jdbcType=BIT},
+        dept_id = #{dept.id,jdbcType=BIGINT}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="base_select"/>
+        from
+        <include refid="base_from"/>
+        where employee.id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+    select id, name, password, email, age, admin, dept_id
+    from employee
+  </select>
+
+    <sql id="base_select">
+    employee.*,department.id department_id,department.name department_name
+  </sql>
+    <sql id="base_from">
+    employee LEFT JOIN department ON employee.dept_id = department.id
+  </sql>
+    <sql id="base_where">
+        <where>
+            <if test="keyword!=null and keyword!=''">
+                and (employee.name LIKE concat("%",#{keyword},"%") or employee.email LIKE concat("%",#{keyword},"%"))
+            </if>
+            <if test="deptId>0">
+                and dept_id=#{deptId}
+            </if>
+        </where>
+    </sql>
+
+    <select id="queryForCount" resultType="java.lang.Integer">
+        SELECT count(*)
+        FROM
+        <include refid="base_from"/>
+        <include refid="base_where"/>
+    </select>
+    <select id="queryForList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="base_select"/>
+        FROM
+        <include refid="base_from"/>
+        <include refid="base_where"/>
+        limit #{beginIndex},#{pageSize}
+    </select>
+    <select id="checkLogin" resultType="com._520it.wms.domain.Employee">
+        SELECT * FROM employee WHERE name=#{username} and password=#{password}
+    </select>
+</mapper>

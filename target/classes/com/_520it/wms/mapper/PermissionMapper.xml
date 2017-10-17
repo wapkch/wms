@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.wms.mapper.PermissionMapper">
+    <insert id="save">
+        INSERT INTO permission(name,expression) VALUES (#{name},#{expression})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM permission WHERE id=#{id}
+    </delete>
+
+    <select id="listAll" resultType="Permission">
+        SELECT * FROM permission
+    </select>
+
+    <select id="queryForCount" resultType="int">
+        SELECT count(*) FROM permission
+    </select>
+
+    <select id="queryForList" resultType="Permission">
+        SELECT * FROM permission
+        limit #{beginIndex},#{pageSize}
+    </select>
+
+    <select id="selectPermissionByRoleId" resultType="Permission">
+        SELECT * FROM  permission WHERE id IN
+        (
+        SELECT permission_id FROM  role_permission WHERE role_id=#{roleId}
+        )
+    </select>
+</mapper>

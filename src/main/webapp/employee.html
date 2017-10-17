@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/js/jquery-easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/js/jquery-easyui/themes/icon.css">
+    <script type="text/javascript" src="/js/jquery-easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/js/system/employee.js"></script>
+    <title>Title</title>
+</head>
+<body>
+
+<div id="employee_datagrid"></div>
+<div id="employee_dialog">
+   <form id="employee_form">
+       <input type="hidden" name="employee.id"/>
+       <table align="center" style="margin-top: 20px;">
+           <tr>
+               <td>姓名</td>
+               <td>
+                   <input type="text" name="employee.name"/>
+               </td>
+           </tr>
+           <tr>
+               <td>邮箱</td>
+               <td>
+                   <input type="text" name="employee.email"/>
+               </td>
+           </tr>
+           <tr>
+               <td>年龄</td>
+               <td>
+                   <input type="text" name="employee.age"/>
+               </td>
+           </tr>
+           <tr>
+               <td>超级管理员</td>
+               <td>
+                   <input type="checkbox" name="employee.admin" value="true" />
+               </td>
+           </tr>
+           <tr>
+               <td>部门</td>
+               <td>
+                   <input url="/department.action" class="easyui-combobox" name="employee.dept.id"
+                          valueField="id" textField="name" panelHeight='auto'/>
+               </td>
+           </tr>
+       </table>
+
+   </form>
+</div>
+
+<div id="tb">
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="add()">添加</a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeBtn()">删除</a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true" onclick="edit()">编辑</a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true" onclick="reload()">刷新</a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="batchDelete()">批量删除</a>
+
+    部门
+    <input name="dept_id" url="/department.action" class="easyui-combobox" name="" valueField="id" textField="name" panelHeight="auto"/>
+    关键字<input name="keyword" type="text"/>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true" onclick="searchForKey()">查询</a>
+</div>
+<div id="btns">
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="save()">保存</a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel',plain:true" onclick="cancel()">取消</a>
+</div>
+</body>
+</html>

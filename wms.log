@@ -1,0 +1,412 @@
+15:46:44,873 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@2e574e38]
+15:46:44,876 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+15:46:44,898 DEBUG get:132 - ==> Parameters: 1(Long)
+15:46:44,914 TRACE get:138 - <==    Columns: id, name, sn
+15:46:44,914 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+15:46:44,915 DEBUG get:132 - <==      Total: 1
+15:47:37,451 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@444b5767]
+15:47:37,455 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+15:47:37,477 DEBUG get:132 - ==> Parameters: 1(Long)
+15:47:37,494 TRACE get:138 - <==    Columns: id, name, sn
+15:47:37,494 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+15:47:37,495 DEBUG get:132 - <==      Total: 1
+15:48:06,024 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@2e574e38]
+15:48:06,028 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+15:48:06,049 DEBUG get:132 - ==> Parameters: 1(Long)
+15:48:06,064 TRACE get:138 - <==    Columns: id, name, sn
+15:48:06,065 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+15:48:06,066 DEBUG get:132 - <==      Total: 1
+15:51:07,164 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7d9ae787]
+15:51:07,169 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+15:51:07,193 DEBUG get:132 - ==> Parameters: 1(Long)
+15:51:07,208 TRACE get:138 - <==    Columns: id, name, sn
+15:51:07,208 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+15:51:07,209 DEBUG get:132 - <==      Total: 1
+15:51:07,211 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7d9ae787]
+15:51:07,212 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+15:51:07,212 DEBUG get:132 - ==> Parameters: 1(Long)
+15:51:07,213 TRACE get:138 - <==    Columns: id, name, sn
+15:51:07,213 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+15:51:07,214 DEBUG get:132 - <==      Total: 1
+15:57:00,126 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7b0b54dc]
+15:57:00,130 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+15:57:00,151 DEBUG get:132 - ==> Parameters: 1(Long)
+15:57:00,166 TRACE get:138 - <==    Columns: id, name, sn
+15:57:00,167 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+15:57:00,167 DEBUG get:132 - <==      Total: 1
+15:59:34,234 DEBUG listAll:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@602ef969]
+15:59:34,237 DEBUG listAll:132 - ==>  Preparing: SELECT * FROM department 
+15:59:34,257 DEBUG listAll:132 - ==> Parameters: 
+15:59:34,272 TRACE listAll:138 - <==    Columns: id, name, sn
+15:59:34,273 TRACE listAll:138 - <==        Row: 1, 总经办, General Deparment
+15:59:34,274 TRACE listAll:138 - <==        Row: 2, 人力资源部, Human Resources Department
+15:59:34,274 TRACE listAll:138 - <==        Row: 3, 采购部, Order Department
+15:59:34,275 TRACE listAll:138 - <==        Row: 4, 仓储部, Warehousing Department
+15:59:34,275 TRACE listAll:138 - <==        Row: 5, 财务部, Finance Department
+15:59:34,275 TRACE listAll:138 - <==        Row: 6, 技术部, Technolog Department 
+15:59:34,276 TRACE listAll:138 - <==        Row: 7, 行政部, Admin Department 
+15:59:34,276 TRACE listAll:138 - <==        Row: 11, 999, 999
+15:59:34,277 TRACE listAll:138 - <==        Row: 12, 总经办, BOSS
+15:59:34,277 TRACE listAll:138 - <==        Row: 13, 总经办, BOSS
+15:59:34,277 TRACE listAll:138 - <==        Row: 14, 总经办, BOSS
+15:59:34,277 DEBUG listAll:132 - <==      Total: 11
+16:02:37,374 DEBUG listAll:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@4501c831]
+16:02:37,378 DEBUG listAll:132 - ==>  Preparing: SELECT * FROM department 
+16:02:37,400 DEBUG listAll:132 - ==> Parameters: 
+16:02:37,417 TRACE listAll:138 - <==    Columns: id, name, sn
+16:02:37,418 TRACE listAll:138 - <==        Row: 1, 总经办, General Deparment
+16:02:37,418 TRACE listAll:138 - <==        Row: 2, 人力资源部, Human Resources Department
+16:02:37,419 TRACE listAll:138 - <==        Row: 3, 采购部, Order Department
+16:02:37,419 TRACE listAll:138 - <==        Row: 4, 仓储部, Warehousing Department
+16:02:37,419 TRACE listAll:138 - <==        Row: 5, 财务部, Finance Department
+16:02:37,420 TRACE listAll:138 - <==        Row: 6, 技术部, Technolog Department 
+16:02:37,420 TRACE listAll:138 - <==        Row: 7, 行政部, Admin Department 
+16:02:37,420 TRACE listAll:138 - <==        Row: 11, 999, 999
+16:02:37,421 TRACE listAll:138 - <==        Row: 12, 总经办, BOSS
+16:02:37,421 TRACE listAll:138 - <==        Row: 13, 总经办, BOSS
+16:02:37,421 TRACE listAll:138 - <==        Row: 14, 总经办, BOSS
+16:02:37,422 DEBUG listAll:132 - <==      Total: 11
+16:02:37,425 DEBUG listAll:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@4501c831]
+16:02:37,425 DEBUG listAll:132 - ==>  Preparing: SELECT * FROM department 
+16:02:37,425 DEBUG listAll:132 - ==> Parameters: 
+16:02:37,426 TRACE listAll:138 - <==    Columns: id, name, sn
+16:02:37,426 TRACE listAll:138 - <==        Row: 1, 总经办, General Deparment
+16:02:37,426 TRACE listAll:138 - <==        Row: 2, 人力资源部, Human Resources Department
+16:02:37,427 TRACE listAll:138 - <==        Row: 3, 采购部, Order Department
+16:02:37,427 TRACE listAll:138 - <==        Row: 4, 仓储部, Warehousing Department
+16:02:37,427 TRACE listAll:138 - <==        Row: 5, 财务部, Finance Department
+16:02:37,428 TRACE listAll:138 - <==        Row: 6, 技术部, Technolog Department 
+16:02:37,429 TRACE listAll:138 - <==        Row: 7, 行政部, Admin Department 
+16:02:37,429 TRACE listAll:138 - <==        Row: 11, 999, 999
+16:02:37,429 TRACE listAll:138 - <==        Row: 12, 总经办, BOSS
+16:02:37,429 TRACE listAll:138 - <==        Row: 13, 总经办, BOSS
+16:02:37,430 TRACE listAll:138 - <==        Row: 14, 总经办, BOSS
+16:02:37,430 DEBUG listAll:132 - <==      Total: 11
+16:04:29,193 DEBUG listAll:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@a20361b]
+16:04:29,198 DEBUG listAll:132 - ==>  Preparing: SELECT * FROM department 
+16:04:29,227 DEBUG listAll:132 - ==> Parameters: 
+16:04:29,244 TRACE listAll:138 - <==    Columns: id, name, sn
+16:04:29,244 TRACE listAll:138 - <==        Row: 1, 总经办, General Deparment
+16:04:29,246 TRACE listAll:138 - <==        Row: 2, 人力资源部, Human Resources Department
+16:04:29,247 TRACE listAll:138 - <==        Row: 3, 采购部, Order Department
+16:04:29,247 TRACE listAll:138 - <==        Row: 4, 仓储部, Warehousing Department
+16:04:29,247 TRACE listAll:138 - <==        Row: 5, 财务部, Finance Department
+16:04:29,248 TRACE listAll:138 - <==        Row: 6, 技术部, Technolog Department 
+16:04:29,248 TRACE listAll:138 - <==        Row: 7, 行政部, Admin Department 
+16:04:29,249 TRACE listAll:138 - <==        Row: 11, 999, 999
+16:04:29,250 TRACE listAll:138 - <==        Row: 12, 总经办, BOSS
+16:04:29,250 TRACE listAll:138 - <==        Row: 13, 总经办, BOSS
+16:04:29,250 TRACE listAll:138 - <==        Row: 14, 总经办, BOSS
+16:04:29,251 DEBUG listAll:132 - <==      Total: 11
+16:04:29,254 DEBUG listAll:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@a20361b]
+16:04:29,254 DEBUG listAll:132 - ==>  Preparing: SELECT * FROM department 
+16:04:29,254 DEBUG listAll:132 - ==> Parameters: 
+16:04:29,255 TRACE listAll:138 - <==    Columns: id, name, sn
+16:04:29,255 TRACE listAll:138 - <==        Row: 1, 总经办, General Deparment
+16:04:29,256 TRACE listAll:138 - <==        Row: 2, 人力资源部, Human Resources Department
+16:04:29,256 TRACE listAll:138 - <==        Row: 3, 采购部, Order Department
+16:04:29,256 TRACE listAll:138 - <==        Row: 4, 仓储部, Warehousing Department
+16:04:29,257 TRACE listAll:138 - <==        Row: 5, 财务部, Finance Department
+16:04:29,258 TRACE listAll:138 - <==        Row: 6, 技术部, Technolog Department 
+16:04:29,258 TRACE listAll:138 - <==        Row: 7, 行政部, Admin Department 
+16:04:29,258 TRACE listAll:138 - <==        Row: 11, 999, 999
+16:04:29,259 TRACE listAll:138 - <==        Row: 12, 总经办, BOSS
+16:04:29,259 TRACE listAll:138 - <==        Row: 13, 总经办, BOSS
+16:04:29,259 TRACE listAll:138 - <==        Row: 14, 总经办, BOSS
+16:04:29,259 DEBUG listAll:132 - <==      Total: 11
+16:04:48,796 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7b0b54dc]
+16:04:48,799 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+16:04:48,820 DEBUG get:132 - ==> Parameters: 1(Long)
+16:04:48,835 TRACE get:138 - <==    Columns: id, name, sn
+16:04:48,835 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+16:04:48,836 DEBUG get:132 - <==      Total: 1
+16:04:48,841 DEBUG save:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7b0b54dc]
+16:04:48,842 DEBUG save:132 - ==>  Preparing: INSERT INTO department(id,name,sn) VALUES(NULL,?,?) 
+16:04:48,843 DEBUG save:132 - ==> Parameters: ooxx(String), null
+16:04:48,844 DEBUG save:132 - <==    Updates: 1
+16:04:48,846 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7b0b54dc]
+16:04:48,847 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+16:04:48,847 DEBUG get:132 - ==> Parameters: 1(Long)
+16:04:48,847 TRACE get:138 - <==    Columns: id, name, sn
+16:04:48,848 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+16:04:48,848 DEBUG get:132 - <==      Total: 1
+16:42:41,183 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@2a5f69f6]
+16:42:41,186 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+16:42:41,207 DEBUG get:132 - ==> Parameters: 1(Long)
+16:42:41,222 TRACE get:138 - <==    Columns: id, name, sn
+16:42:41,222 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+16:42:41,223 DEBUG get:132 - <==      Total: 1
+16:42:41,229 DEBUG save:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@2a5f69f6]
+16:42:41,229 DEBUG save:132 - ==>  Preparing: INSERT INTO department(id,name,sn) VALUES(NULL,?,?) 
+16:42:41,231 DEBUG save:132 - ==> Parameters: ooxx(String), null
+16:42:41,234 DEBUG save:132 - <==    Updates: 1
+17:04:53,644 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@400a4dce]
+17:04:53,647 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+17:04:53,668 DEBUG get:132 - ==> Parameters: 1(Long)
+17:04:53,684 TRACE get:138 - <==    Columns: id, name, sn
+17:04:53,685 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+17:04:53,686 DEBUG get:132 - <==      Total: 1
+17:04:53,691 DEBUG save:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@400a4dce]
+17:04:53,691 DEBUG save:132 - ==>  Preparing: INSERT INTO department(id,name,sn) VALUES(NULL,?,?) 
+17:04:53,693 DEBUG save:132 - ==> Parameters: ooxx(String), null
+17:04:53,694 DEBUG save:132 - <==    Updates: 1
+18:53:30,741 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@587fd6bc]
+18:53:30,759 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+18:53:30,817 DEBUG get:132 - ==> Parameters: 1(Long)
+18:53:30,856 TRACE get:138 - <==    Columns: id, name, sn
+18:53:30,856 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+18:53:30,859 DEBUG get:132 - <==      Total: 1
+18:53:30,870 DEBUG save:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@587fd6bc]
+18:53:30,870 DEBUG save:132 - ==>  Preparing: INSERT INTO department(id,name,sn) VALUES(NULL,?,?) 
+18:53:30,873 DEBUG save:132 - ==> Parameters: ooxx(String), null
+18:53:30,879 DEBUG save:132 - <==    Updates: 1
+18:55:34,810 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@d981a7f]
+18:55:34,824 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+18:55:34,880 DEBUG get:132 - ==> Parameters: 1(Long)
+18:55:34,919 TRACE get:138 - <==    Columns: id, name, sn
+18:55:34,920 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+18:55:34,924 DEBUG get:132 - <==      Total: 1
+18:55:34,935 DEBUG save:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@d981a7f]
+18:55:34,936 DEBUG save:132 - ==>  Preparing: INSERT INTO department(id,name,sn) VALUES(NULL,?,?) 
+18:55:34,940 DEBUG save:132 - ==> Parameters: ooxx(String), null
+18:55:34,944 DEBUG save:132 - <==    Updates: 1
+18:55:49,986 DEBUG get:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@5fb3c90b]
+18:55:49,996 DEBUG get:132 - ==>  Preparing: SELECT * FROM department WHERE id = ? 
+18:55:50,050 DEBUG get:132 - ==> Parameters: 1(Long)
+18:55:50,085 TRACE get:138 - <==    Columns: id, name, sn
+18:55:50,086 TRACE get:138 - <==        Row: 1, 总经办, General Deparment
+18:55:50,087 DEBUG get:132 - <==      Total: 1
+18:55:50,095 DEBUG save:132 - ooo Using Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@5fb3c90b]
+18:55:50,096 DEBUG save:132 - ==>  Preparing: INSERT INTO department(id,name,sn) VALUES(NULL,?,?) 
+18:55:50,098 DEBUG save:132 - ==> Parameters: ooxx(String), null
+18:55:50,099 DEBUG save:132 - <==    Updates: 1
+11:08:42,253 ERROR TestContextManager:231 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b0933e7] to prepare test instance [com._520it.wms.test.DepartmentServiceImplTest@592ea0f8]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com._520it.wms.test.DepartmentServiceImplTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IDepartmentService com._520it.wms.test.DepartmentServiceImplTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IDepartmentService com._520it.wms.test.DepartmentServiceImplTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 34 more
+11:08:42,322 ERROR TestContextManager:231 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@536d8b4e] to prepare test instance [com._520it.wms.test.DepartmentTest@3cd4d8ac]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com._520it.wms.test.DepartmentTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IDepartmentService com._520it.wms.test.DepartmentTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IDepartmentService com._520it.wms.test.DepartmentTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 34 more
+11:08:42,352 ERROR TestContextManager:231 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@536d8b4e] to prepare test instance [com._520it.wms.test.DepartmentTest@3a961928]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com._520it.wms.test.DepartmentTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IDepartmentService com._520it.wms.test.DepartmentTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IDepartmentService com._520it.wms.test.DepartmentTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IDepartmentService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 34 more
+11:08:42,374 ERROR TestContextManager:231 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@54196399] to prepare test instance [com._520it.wms.test.EmployeeServiceImplTest@4ed9fcf1]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com._520it.wms.test.EmployeeServiceImplTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IEmployeeService com._520it.wms.test.EmployeeServiceImplTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IEmployeeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IEmployeeService com._520it.wms.test.EmployeeServiceImplTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IEmployeeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IEmployeeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 34 more
+11:08:42,379 ERROR TestContextManager:231 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@54196399] to prepare test instance [com._520it.wms.test.EmployeeServiceImplTest@3c2e19e5]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com._520it.wms.test.EmployeeServiceImplTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IEmployeeService com._520it.wms.test.EmployeeServiceImplTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IEmployeeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com._520it.wms.departmentService.IEmployeeService com._520it.wms.test.EmployeeServiceImplTest.departmentService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IEmployeeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com._520it.wms.departmentService.IEmployeeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 34 more
